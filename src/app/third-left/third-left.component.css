@@ -1,0 +1,68 @@
+.slider {
+    position: absolute;
+    width: 50%;
+    height: 600px;
+    background-size: 100%;
+    background-position-y: 60%;
+    left: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.hide {
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+.show {
+    transition: opacity 1s;
+    opacity: 1;
+}
+
+.slideshowMenu {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    right: 50%;
+    margin-top: 520px;
+    margin-right: 50px;
+    opacity: 1;
+    width: 100px;
+    height: 50px;
+    background-color: #AE847E;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.next {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.prev {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.icon {
+    color: white;
+}
+
+.currentSlideInfo {
+    position: absolute;
+    font-family: 'Overpass';
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    right: 0;
+    margin-right: 130px;
+    white-space: nowrap;
+}
+
+.currentSlideInfo span {
+    color: #AE847E;
+}

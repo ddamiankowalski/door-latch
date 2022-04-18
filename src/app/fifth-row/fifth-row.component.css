@@ -1,0 +1,61 @@
+.fifthRow {
+    display: flex;
+}
+
+.leftPanel {
+    position: relative;
+    background-color: black;
+    width: 50%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.leftPanel::before {
+    content: '';
+    position: absolute;
+    left: -200vw;
+    top: 0;
+    background-color: black;
+    height: 550px;
+    width: 200vw;
+    z-index: -1;
+}
+
+.rightPanel {
+    background: url('../../assets/img/aboutme.jpg');
+    background-size: 100%;
+    background-position-y: 30%;
+    width: 50%;
+    height: 550px;
+
+}
+
+h2 {
+    margin: 0;
+    font-family: 'Overpass';
+    font-weight: 700, bold;
+    font-size: 18px;
+    line-height: 23px;
+    color: #daa89b;
+}
+
+h1 {
+    margin-top: 50px;
+    font-family: 'Fira Sans';
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    color: #ffffff;
+}
+
+span {
+    font-family: 'Overpass';
+    font-weight: 400, Regular;
+    font-size: 20px;
+    line-height: 140%;
+    color: #ffffff;
+    margin-bottom: 70px;
+    max-width: 400px;
+}

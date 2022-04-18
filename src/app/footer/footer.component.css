@@ -1,0 +1,31 @@
+:host {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    height: 120px;
+}
+
+:host::before {
+    position: absolute;
+    content: '';
+    width: 400vw;
+    height: 120px;
+    left: -200vw;
+    background-color: #F2F2F2;
+    z-index: -1;
+}
+
+.leftMenu {
+    display: flex;
+    align-items: center;
+}
+
+.copyrights p {
+    font-family: 'Overpass';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+}

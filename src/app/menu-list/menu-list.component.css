@@ -1,0 +1,14 @@
+.menuList {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    justify-content: right;
+    gap: 63px;
+    color: white;
+}
+
+.menuList p {
+    cursor: pointer;
+}

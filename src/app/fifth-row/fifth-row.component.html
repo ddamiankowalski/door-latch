@@ -1,0 +1,10 @@
+<div class="fifthRow">
+    <div class="leftPanel" [@scrollBg]="{value: fifthRowVisible, params: {delay: 100}}">
+        <h2 [@scrollText]="{value: fifthRowVisible, params: {delay: 300}}">A few words about me and about my company</h2>
+        <h1 [@scrollText]="{value: fifthRowVisible, params: {delay: 320}}">Because I believe being close to my clients' needs is a priority</h1>
+        <span [@scrollText]="{value: fifthRowVisible, params: {delay: 550}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+        <app-button class="btn" buttonDescription="brown" buttonText="Send an email"></app-button>
+    </div>
+    <div [@scrollTo]="{value: fifthRowVisible, params: {delay: 100}}" class="rightPanel">
+    </div>
+</div>

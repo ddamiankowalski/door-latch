@@ -1,0 +1,14 @@
+<div class="slideshowMenu" [@scrollToMenu]="{value: isVisible, params: {delay: 100}}">
+    <div class="currentSlideInfo">
+        <p><span>{{ currentIndex + 1 }}</span> / 3</p>
+    </div>
+    <div class="prev" (click)="prev()">
+        <fa-icon class="icon" [icon]="faArrowLeft"></fa-icon>
+    </div>
+    <div class="next" (click)="next()">
+        <fa-icon class="icon" [icon]="faArrowRight"></fa-icon>
+    </div>
+</div>
+<div [class]="classname" class="slider" [style.backgroundSize]="bgSize" [style.background-image]="'url(../../assets/img/' + current + ')'">
+    <img class="hidden" [src]="'url(../../assets/img/' + current" (load)="showImage()">
+</div>

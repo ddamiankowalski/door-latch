@@ -1,0 +1,17 @@
+.menu {
+    display: flex;
+}
+
+p:first-of-type {
+    margin-left: 80px;
+}
+
+p {
+    display: flex;
+    font-family: 'Overpass';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    margin-left: 80px;
+    cursor: pointer;
+}

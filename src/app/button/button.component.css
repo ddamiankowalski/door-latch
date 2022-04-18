@@ -1,0 +1,62 @@
+button {
+    border: none;
+    text-align: center;
+    font-family: 'Overpass';
+    background-color: white;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    cursor: pointer;
+}
+
+.black {
+    color: white;
+    background-color: black;
+    padding: 16px 40px;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+}
+
+.black-nb {
+    color: white;
+    background-color: #AE847E;
+    padding: 16px 40px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.white {
+    color: black;
+    background-color: white;
+    padding: 16px 40px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.white-t {
+    color: #f2f2f2;
+    background-color: transparent;
+    padding: 16px 40px;
+    box-sizing: border-box;
+    outline: 2px solid #f2f2f2;
+    outline-offset: -2px;
+    border-radius: 8px;
+    text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.brown {
+    color: white;
+    background-color: #AE847E;
+    padding: 16px 40px;
+    border-radius: 8px;
+}
+
+.brown-nb {
+    color: #daa89b;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 16px 40px;
+    border-radius: 8px;
+    border: 1px solid #daa89b;
+}

@@ -1,0 +1,40 @@
+.review { 
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.reviewImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 25px;
+}
+
+.circle {
+    width: 75px;
+    height: 75px;
+    background: url('../../assets/img/profile.jpg');
+    background-size: 100%;
+    background-position-y: 50%;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+h3 {
+    font-family: 'Overpass';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 0;
+}
+
+h4 {
+    font-family: 'Overpass';
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 140%;
+    margin: 10px 0;
+    color: #AE847E;
+}

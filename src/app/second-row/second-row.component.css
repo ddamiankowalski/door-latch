@@ -1,0 +1,21 @@
+.secondRow {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    left: 0;
+    background: #F2F2F2;
+    padding: 200px 0;
+    z-index: 1;
+}
+
+.secondRow::before {
+    content: '';
+    background-color: #F2F2F2;
+    position: absolute;
+    height: 100%;
+    width: 400vw;
+    left: -200%;
+    top: 0;
+    z-index: -1;
+}
