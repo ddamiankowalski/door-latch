@@ -1,17 +1,17 @@
 <div class="sixthRow">
     <div class="leftPanel">
-        <h1>Ways of reaching out</h1>
-        <h2>Leave us your name and your email so we can get back to you as quick as possible</h2>
-        <form action="" autocomplete="off">
+        <h1 [@scrollTo]="{value: sixthRowVisible, params: {delay: 100}}">Ways of reaching out</h1>
+        <h2 [@scrollTo]="{value: sixthRowVisible, params: {delay: 200}}">Leave us your name and your email so we can get back to you as quick as possible</h2>
+        <form [@scrollTo]="{value: sixthRowVisible, params: {delay: 400}}" action="" autocomplete="off">
             <input type="text" id="fname" placeholder="Your name">
             <input type="text" id="email" placeholder="Your email">
             <app-button class="btn" buttonDescription="black" buttonText="Send an email" buttonWidth="full"></app-button>
         </form>
     </div>
     <div class="rightPanel">
-        <h1>A brief description of how we work</h1>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
-        <h2>Our customers’ satisfaction proves we do not make empty promises</h2>
-        <app-review></app-review>
+        <h1 [@scrollTo]="{value: sixthRowVisible, params: {delay: 500}}">A brief description of how we work</h1>
+        <span [@scrollTo]="{value: sixthRowVisible, params: {delay: 700}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
+        <h2 [@scrollTo]="{value: sixthRowVisible, params: {delay: 800}}">Our customers’ satisfaction proves we do not make empty promises</h2>
+        <app-review [@scrollTo]="{value: sixthRowVisible, params: {delay: 800}}"></app-review>
     </div>
 </div>

@@ -40,7 +40,7 @@ export class FourthRowComponent implements OnInit {
     const rect = element.getBoundingClientRect();
     return (
       rect.top + rect.height / 2 >= 0 &&
-      rect.bottom - rect.height / 2 <= (window.innerHeight || document.documentElement.clientHeight)
+      rect.bottom - rect.height / 2 + 250 <= (window.innerHeight || document.documentElement.clientHeight)
     );
   }
 }

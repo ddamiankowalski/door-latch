@@ -6,6 +6,7 @@
     justify-content: space-between;
     background-color: #F2F2F2;
     height: 120px;
+    padding: 30px 0;
 }
 
 :host::before {
@@ -16,6 +17,7 @@
     left: -200vw;
     background-color: #F2F2F2;
     z-index: -1;
+    padding: 30px 0;
 }
 
 .leftMenu {

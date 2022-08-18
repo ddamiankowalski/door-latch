@@ -1,4 +1,4 @@
-import { HostListener, Component, OnInit, Input, ElementRef } from '@angular/core';
+import { HostListener, Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-second-row',
@@ -35,7 +35,7 @@ export class SecondRowComponent implements OnInit {
   isInViewport(element: any) {
     const rect = element.getBoundingClientRect();
     return (
-      rect.top + rect.height / 2 >= 0 &&
+      rect.top + rect.height / 2 >= 0 + 250 &&
       rect.bottom - rect.height / 2 <= (window.innerHeight || document.documentElement.clientHeight)
     );
   }
