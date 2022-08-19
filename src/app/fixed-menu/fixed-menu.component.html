@@ -1,3 +1,11 @@
-<div class="fixedMenu">
-    
+<div [@slide]="isHidden" class="menuList">
+    <div class="fixedMenuContainer">
+        <div class="menuContainer">
+            <p class="menuElement" *ngFor="let element of menuList">{{ element.name }}</p>
+        </div>
+        <div class="callSection">
+            <button class="brown">Make an Order</button>
+            <button class="white-t">Call</button>
+        </div>
+    </div>
 </div>
