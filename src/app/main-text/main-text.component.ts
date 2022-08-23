@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { SectionReference } from '../services/sectionreference.service';
 
 @Component({
   selector: 'app-main-text',
   templateUrl: './main-text.component.html',
   styleUrls: ['./main-text.component.css']
 })
-export class MainTextComponent implements OnInit {
+export class MainTextComponent implements OnInit, AfterViewInit {
+  @ViewChild('reference', { read: ElementRef, static: true }) reference!: ElementRef;
 
-  constructor() { }
+  constructor(public sectionref: SectionReference) { }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+    this.sectionref.pushElement(this.reference.nativeElement);
   }
 
 }

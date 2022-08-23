@@ -22,6 +22,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FooterMenuComponent } from './footer-menu/footer-menu.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FixedMenuComponent } from './fixed-menu/fixed-menu.component';
+import { SectionReference } from './services/sectionreference.service';
+
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { FixedMenuComponent } from './fixed-menu/fixed-menu.component';
     BrowserAnimationsModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [
+    SectionReference
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

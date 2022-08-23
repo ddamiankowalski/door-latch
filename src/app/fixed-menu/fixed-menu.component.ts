@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, HostListener, OnInit } from '@angular/core';
+import { SectionReference } from '../services/sectionreference.service';
 
 @Component({
   selector: 'app-fixed-menu',
@@ -33,7 +34,7 @@ export class FixedMenuComponent implements OnInit {
 
   public isHidden: boolean = true;
 
-  constructor() { }
+  constructor(public sectionRef: SectionReference) { }
 
   ngOnInit(): void {
   }
@@ -44,5 +45,10 @@ export class FixedMenuComponent implements OnInit {
     {name: 'Our Work'},
     {name: 'Pricing'}
   ]
+
+  public navigateToSection() {
+    console.log(this.sectionRef.elementArray)
+    this.sectionRef.elementArray[0].scrollIntoView({behavior: 'smooth'})
+  }
 
 }

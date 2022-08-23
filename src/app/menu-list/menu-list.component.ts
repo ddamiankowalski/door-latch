@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SectionReference } from '../services/sectionreference.service';
 
 @Component({
   selector: 'app-menu-list',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuListComponent implements OnInit {
 
-  constructor() { }
+  constructor(public sectionRef: SectionReference) { }
 
   menuList: any = [
     {name: 'Home'},
@@ -17,6 +18,10 @@ export class MenuListComponent implements OnInit {
   ]
 
   ngOnInit(): void {
+  }
+
+  public navigateToSection() {
+    console.log(this.sectionRef.elementArray)
   }
 
 }
