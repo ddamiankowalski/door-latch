@@ -4,9 +4,14 @@ import { Injectable } from "@angular/core";
     providedIn: 'root'
 })
 export class SectionReference {
-    public elementArray: Array<HTMLElement> = [];
+    public elementArray: Array<any> = [];
 
-    public pushElement(el: HTMLElement) {
-        this.elementArray.push(el);
+    public pushElement(el: HTMLElement, name: string, block: string) {
+        const obj = {
+            name: name,
+            ref: el,
+            block: block
+        }
+        this.elementArray.push(obj);
     }
 }

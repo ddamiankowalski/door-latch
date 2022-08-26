@@ -6,16 +6,11 @@ import { SectionReference } from '../services/sectionreference.service';
   templateUrl: './main-text.component.html',
   styleUrls: ['./main-text.component.css']
 })
-export class MainTextComponent implements OnInit, AfterViewInit {
+export class MainTextComponent implements OnInit {
   @ViewChild('reference', { read: ElementRef, static: true }) reference!: ElementRef;
 
   constructor(public sectionref: SectionReference) { }
 
   ngOnInit(): void {
   }
-
-  ngAfterViewInit(): void {
-    this.sectionref.pushElement(this.reference.nativeElement);
-  }
-
 }

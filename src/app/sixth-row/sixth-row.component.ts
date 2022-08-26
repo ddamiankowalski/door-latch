@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { SectionReference } from '../services/sectionreference.service';
 
 @Component({
   selector: 'app-sixth-row',
@@ -23,7 +24,8 @@ import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
     ])
   ]
 })
-export class SixthRowComponent implements OnInit {
+export class SixthRowComponent implements OnInit, AfterViewInit {
+  @ViewChild('reference', { read: ElementRef, static: true }) reference!: ElementRef;
   @HostListener('window:scroll', ['$event'])
   onScroll() {
     this.sixthRowVisible = this.isInViewport(this.myElement.nativeElement);
@@ -31,9 +33,13 @@ export class SixthRowComponent implements OnInit {
 
   sixthRowVisible: boolean = false;
 
-  constructor(private myElement: ElementRef) { }
+  constructor(private myElement: ElementRef, public sectionref: SectionReference) { }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+    this.sectionref.pushElement(this.reference.nativeElement, 'contact', 'center');
   }
 
   isInViewport(element: any) {

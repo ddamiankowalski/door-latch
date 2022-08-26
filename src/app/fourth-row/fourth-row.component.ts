@@ -1,5 +1,6 @@
-import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { SectionReference } from '../services/sectionreference.service';
 
 @Component({
   selector: 'app-fourth-row',
@@ -24,6 +25,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class FourthRowComponent implements OnInit {
+  @ViewChild('reference', { read: ElementRef, static: true }) reference!: ElementRef;
   @HostListener('window:scroll', ['$event'])
   onScroll() {
     this.fourthRowVisible = this.isInViewport(this.myElement.nativeElement);
@@ -31,9 +33,13 @@ export class FourthRowComponent implements OnInit {
 
   fourthRowVisible: boolean = false;
 
-  constructor(private myElement: ElementRef) { }
+  constructor(private myElement: ElementRef, public sectionref: SectionReference) { }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+    this.sectionref.pushElement(this.reference.nativeElement, 'pricing', 'center');
   }
 
   isInViewport(element: any) {

@@ -1,7 +1,7 @@
 <div [@slide]="isHidden" class="menuList">
     <div class="fixedMenuContainer">
         <div class="menuContainer">
-            <p (click)="navigateToSection()" class="menuElement" *ngFor="let element of menuList">{{ element.name }}</p>
+            <p (click)="navigateToSection(element.name)" class="menuElement" *ngFor="let element of menuList">{{ element.name }}</p>
         </div>
         <div class="callSection">
             <button class="brown">Make an Order</button>

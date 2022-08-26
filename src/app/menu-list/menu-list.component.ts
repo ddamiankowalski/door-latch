@@ -20,8 +20,12 @@ export class MenuListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public navigateToSection() {
-    console.log(this.sectionRef.elementArray)
+  public navigateToSection(name: string) {
+    this.sectionRef.elementArray.forEach(element => {
+      if(element.name == name.toLowerCase()) {
+        element.ref.scrollIntoView({behavior: 'smooth', block: element.block})
+      }
+    })
   }
 
 }

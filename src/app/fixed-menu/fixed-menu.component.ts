@@ -46,9 +46,12 @@ export class FixedMenuComponent implements OnInit {
     {name: 'Pricing'}
   ]
 
-  public navigateToSection() {
-    console.log(this.sectionRef.elementArray)
-    this.sectionRef.elementArray[0].scrollIntoView({behavior: 'smooth'})
+  public navigateToSection(name: string) {
+    this.sectionRef.elementArray.forEach(element => {
+      if(element.name == name.toLowerCase()) {
+        element.ref.scrollIntoView({behavior: 'smooth', block: element.block})
+      }
+    })
   }
 
 }
