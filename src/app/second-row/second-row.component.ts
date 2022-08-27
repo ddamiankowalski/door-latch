@@ -16,15 +16,18 @@ export class SecondRowComponent implements OnInit {
   items: any = [
     {
       name: 'Simple designs',
-      text: 'This is a simple text that allows you to visualise this component. Please change it later',
+      text: 'The rule is the simpler the better',
+      icon: 'design_services'
     },
     {
       name: 'Great communication',
-      text: 'This is a simple text that allows you to visualise this component. Please change it later',
+      text: 'Communication is the key to success',
+      icon: 'wifi_tethering'
     },
     {
       name: 'Adequate pricing',
-      text: 'This is a simple text that allows you to visualise this component. Please change it later',
+      text: 'Because overpriced services are the worst',
+      icon: 'trending_down'
     },
   ]
   constructor(private myElement: ElementRef) { }

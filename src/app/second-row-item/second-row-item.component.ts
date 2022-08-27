@@ -28,6 +28,7 @@ export class SecondRowItemComponent implements OnInit {
   @Input() text: string = '';
   @Input() isVisible: boolean = false;
   @Input() index: number = 0;
+  @Input() icon: string = '';
 
   delayValue: number = 0;
   show: boolean = false;

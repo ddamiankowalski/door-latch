@@ -23,6 +23,7 @@ import { FooterMenuComponent } from './footer-menu/footer-menu.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FixedMenuComponent } from './fixed-menu/fixed-menu.component';
 import { SectionReference } from './services/sectionreference.service';
+import { ResizeWindowService } from './services/resizewindow.service';
 
 
 @NgModule({
@@ -50,10 +51,11 @@ import { SectionReference } from './services/sectionreference.service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   providers: [
-    SectionReference
+    SectionReference,
+    ResizeWindowService
   ],
   bootstrap: [AppComponent]
 })
